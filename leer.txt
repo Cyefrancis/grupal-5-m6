@@ -1,0 +1,3 @@
+
+con el entorno virtual activo en consola escribir "pip install -r requirements.txt"
+luego escribir python manage.py runserver 

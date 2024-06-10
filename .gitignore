@@ -1,0 +1,152 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Migrations
+**/migrations/*
+!**/migrations/__init__.py
+
+# Django stuff:
+local_settings.py
+db.sqlite3
+media/
+
+# If you are using SQLite:
+*.sqlite3
+
+# If you are using MySQL or MariaDB:
+*.sql
+*.tar.gz
+
+# Environment variables and virtual environment directories
+.env
+.env.*
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.venv/
+venv/
+env/
+ENV/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node modules (for front-end development)
+node_modules/
+
+# Cache
+.cache/
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+.cache/
+coverage.*
+htmlcov/
+
+# Unit test / coverage reports
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# pyenv
+.python-version
+
+# pytest
+.cache/
+
+# mypy
+.mypy_cache/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Environments
+.env
+.envrc
+*.env
+myvenv
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (e.g. PyCharm)
+.idea/
+*.iml
+
+# Others
+*.bak
+*.tmp
+*.temp
+
+# Local settings
+local.py
+
+# AWS Elastic Beanstalk
+.elasticbeanstalk/*
+
+# Flask specific files
+instance/
+.webassets-cache
+
+# Scrapyd
+.scrapyd/
+
+# PyInstaller
+#  Usually these files are written by a python script from scratch
+#  or by a platform-specific "Build system", but these are the common cases
+#  of generated binary files:
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+# Windows
+Thumbs.db
+ehthumbs.db

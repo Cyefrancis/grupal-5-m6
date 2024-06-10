@@ -1,0 +1,56 @@
+{% extends 'base_nav.html'%}
+{% block content %}
+<h1>Lista de Productos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Image</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for producto in productos %}
+
+    <tr>
+      <td>{{producto.id}}</td>
+      <td>
+        <a href="{% url 'producto:detail' producto.id %}">
+          <img src="{{ producto.image}}" alt="" width="50">
+        </a>
+      </td>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.precio}}</td>
+      <td>{{ producto.stock}}</td>
+      <td>{{ producto.categoria}}</td>
+      <td>
+        <!-- begin: editar -->
+          <a href="{% url 'producto:editar' producto.id %}" class="btn btn-success">
+            <i class="fa fa-edit"></i>
+          </a>
+        <!-- end: editar -->
+
+        <!-- begin: delete-->
+        <form id="deleteForm-{{ producto.id }}" method="POST" action="{% url 'producto:eliminar' producto.id %}" style="display: inline-block;">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">
+            <i class="fa fa-trash"></i>
+          </button>
+        </form>
+        <!-- end: delete-->
+      </td>
+    </tr>
+
+    {% endfor %}
+
+
+  </tbody>
+</table>
+
+<a href="{% url 'producto:formulario' %}" class="btn btn-success">Agregar Producto</a>
+{% endblock %}
